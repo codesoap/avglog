@@ -95,7 +95,7 @@ func printWithAvg(msrs []measurement) {
 			if m.t.After(until) {
 				break
 			}
-			if m.t.After(since) {
+			if !m.t.Before(since) {
 				nums = append(nums, m.num)
 			}
 		}
